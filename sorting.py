@@ -51,3 +51,20 @@ class Sort:
                 return a
             arr = merge(a1,a2)
         return arr
+
+    @staticmethod
+    def selection(arr):
+        def imax(arr):
+            if len(arr)==0: return None
+            i = 0
+            for j in range(len(arr)):
+                if arr[j]>arr[i]:
+                    i=j
+            return i
+
+        for i in range(len(arr),0,-1):
+            j = imax(arr[:i])
+            if j is not None:
+                arr[j],arr[i-1] = arr[i-1],arr[j]
+
+        return arr

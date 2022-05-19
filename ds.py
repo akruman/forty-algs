@@ -48,3 +48,4 @@ from sorting import Sort
 print(Sort.bubble([1,5,3,2,6,1]))
 print(Sort.insert([1,5,3,2,6,1]))
 print(Sort.merge([1,5,3,2,6,1]))
+print(Sort.selection([1,5,3,2,6,1]))
