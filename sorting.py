@@ -1,3 +1,6 @@
+from os import stat_result
+
+
 class Sort:
     @staticmethod
     def bubble(arr):
@@ -17,4 +20,34 @@ class Sort:
                 else:
                     break
                 arr[i]=e
+        return arr
+
+    @staticmethod
+    def merge(arr): # arr passed by ref
+        n = len(arr)
+        if n>1:
+            n = n//2
+            #print(arr[:n],arr[n:])
+            a1=Sort.merge(arr[:n]) # new arr created, with same values, which are referenced
+            a2=Sort.merge(arr[n:])
+            def merge(a1,a2):
+                a = []
+                n = (len(a1),len(a2))
+                i = [0,0]
+                while sum(i) < sum(n):
+                    if i[0]<n[0] and i[1]<n[1]:
+                        if a1[i[0]] < a2[i[1]]:
+                            a += [a1[i[0]]]
+                            i[0]+=1
+                        else:
+                            a += [a2[i[1]]]
+                            i[1]+=1
+                    elif i[0]==n[0]:
+                        a += a2[i[1]:]
+                        i[1] = n[1]
+                    elif i[1]==n[1]:
+                        a += a1[i[0]:]
+                        i[0] = n[0]
+                return a
+            arr = merge(a1,a2)
         return arr
