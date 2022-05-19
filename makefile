@@ -8,5 +8,3 @@ run:
 	python3 -i ds.py
 clean:
 	rm -rf venv
-stop:
-	deactivate
