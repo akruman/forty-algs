@@ -49,3 +49,9 @@ print(Sort.bubble([1,5,3,2,6,1]))
 print(Sort.insert([1,5,3,2,6,1]))
 print(Sort.merge([1,5,3,2,6,1]))
 print(Sort.selection([1,5,3,2,6,1]))
+
+from search import Search
+print(Search.linear([1,5,3,2,6,1],2))
+
+a = Sort.merge([1,5,3,2,6,1])
+print(Search.linear(a,2))
