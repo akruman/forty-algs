@@ -55,3 +55,4 @@ print(Search.linear([1,5,3,2,6,1],2))
 
 a = Sort.merge([1,5,3,2,6,1])
 print(Search.linear(a,2))
+print(Search.interpolation(a,2))
