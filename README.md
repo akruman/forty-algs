@@ -9,6 +9,8 @@ pip3 list
 pip install pandas
 python3 -m pip freeze > requirments.txt
 
+vscode : VS Code Jupyter Notebook Previewer
+
 # run interactively
 python3 -i ds.py 
 
